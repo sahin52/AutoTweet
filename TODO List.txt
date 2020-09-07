@@ -1,0 +1,16 @@
+Twitter Auto Follow From Search
+1- her türlü durumda takip etmeyi sağlayacak şekilde tuşların class namelerini bulabilmek(Tüm hepsini kaydet ya da "adlı kişiyi takip et" yazan yerin classı elde edilmeli.)
+Twitter Follow from rt
+2- hesabın sayfasına girip takipçi/takip ettiği oranına göre takip et, takipçi alt limit 500 olsun.
+3- bi sayfada isem, sayfanın gönderilerini rtleyenleri takip etsin. bunun için tivite tıklayip rtleyenler kısmına tıklaması gerekiyor.
+4- her hesap için alakalı hesaplar listesi oluşturulmalı. O konsepte uygun olarak takipçi çekmek gerek.
+Instagram auto follow
+5- Alakalı hesaplar çok önemli, bu konuda bir liste hazırlanmalı.
+6- Aynı kişinin farklı hesaplar tarafından takip edilmesini önlemek gerekebilir, bunun için ya baş harfleri önemsicez, ya total bir database oluşturup oraya hepsini eklicez, ya da bilmiyorum ayrı bir yol denenebilir.
+7-Günlük limiti aşılmaması için günlük takip edilen hesapların sayısı dosyası oluşturulup kaydedilmeli ve o dosyanın içinde kaç insan olduğuna bakılmalı, her 10-20-30 seferde bir de tekrar dosyaya kaydetmeli.
+
+
+GENEL
+1- Bitirme butonu oluşturulmalı.
+2- Paylaşılacak şeylerin databasei oluşturulmalı, ya da benzer hesapların listesi tutulup kolay yükleme sağlanmalı.
+

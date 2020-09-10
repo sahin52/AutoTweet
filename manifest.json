@@ -1,4 +1,7 @@
-{
+{ "background": {
+  "persistent": false,
+  "scripts": ["background.js"]
+  },
   "manifest_version": 2,
 
   "name": "Auto Tweet",
@@ -8,7 +11,7 @@
     "128": "icon_128.png" 
   },
   
-  "permissions": ["activeTab"],
+  "permissions": ["contextMenus", "activeTab", "cookies", "*://twitter.com/*"],
   
 
   "browser_action":{

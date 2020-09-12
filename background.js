@@ -36,7 +36,7 @@ const onInstalled = () => {
 }
 const browserAction = (tab) => {
   chrome.tabs.executeScript({ code: 'window.getSelection().toString();' }, ([selection]) =>
-    tweet("", selection || tab.title)
+    tweet("", "mutlu olsak adapte olamayız bu saatten sonra")
   )
   console.log("browser action");
 }
@@ -51,4 +51,6 @@ chrome.runtime.onInstalled.addListener(onInstalled)
 chrome.contextMenus.onClicked.addListener(contextMenus)
 chrome.browserAction.onClicked.addListener(browserAction)
 
-
+chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
+  if(message.closeThis) chrome.tabs.remove(sender.tab.id);
+});

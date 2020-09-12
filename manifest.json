@@ -2,6 +2,14 @@
   "persistent": false,
   "scripts": ["background.js"]
   },
+  "content_scripts": [
+  	{
+  		"matches":[
+  			"*://twitter.com/compose/tweet?text*"
+  		],
+  		"js":["content.js"]
+  	}
+  ],
   "manifest_version": 2,
 
   "name": "Auto Tweet",
@@ -16,7 +24,6 @@
 
   "browser_action":{
   	"default_icon": "icon.png",
-  	"default_popup": "popup.html",
   	"default_title": "SahinS Extension"
   }
 

@@ -25,6 +25,8 @@ const tweet = async (url, title = '') => {
   })
 
   chrome.tabs.create({ url: endpoint })
+  chrome.tabs.create({ url: endpoint })
+
 }
 const onInstalled = () => {
   const contexts = ['page', 'selection', 'link', 'image']
@@ -47,6 +49,7 @@ const contextMenus = (data, tab) => {
   if ('selection' == data.menuItemId) tweet(tab.url, data.selectionText)
   if ('image' == data.menuItemId) tweet(data.srcUrl)
 }
+async function run(){
 chrome.runtime.onInstalled.addListener(onInstalled)
 chrome.contextMenus.onClicked.addListener(contextMenus)
 chrome.browserAction.onClicked.addListener(browserAction)
@@ -54,3 +57,22 @@ chrome.browserAction.onClicked.addListener(browserAction)
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
   if(message.closeThis) chrome.tabs.remove(sender.tab.id);
 });
+
+}
+
+run();
+
+async function readFromFile(path){
+	const url = chrome.runtime.getURL(path);
+
+	await fetch(url)
+	.then(async (response) => {
+		console.log(response);
+		let text = await response.json();
+		console.log(text);
+		return text;
+		}
+	)
+	.then((json) => console.log(JSON.stringify(json))); 
+	
+}
